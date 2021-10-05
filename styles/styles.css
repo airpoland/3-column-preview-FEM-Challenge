@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+--BrightOrange: hsl(31, 77%, 52%);
+--DarkCyan: hsl(184, 100%, 22%);
+--VeryDarkCyan: hsl(179, 100%, 13%);
+--BoldFont: "Big Shoulders Display";
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+.container{
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); what is this???*/
+
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 500px 1fr 50px;
+    height: 100vh;
+    width: 900px;
+}
+
+.topper{
+    grid-column: 1 / -1;
+}
+
+footer{
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.tile{
+    color: white;
+}
+
+.first{
+    background-color: var(--BrightOrange);
+    border-radius: 5px 0px 0px 5px;
+}
+
+.second{
+    background-color: var(--DarkCyan);
+}
+
+.third{
+    background-color: var(--VeryDarkCyan);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.icon{
+    width: auto;
+    height: 40px;
+    margin: 40px;
+}
+
+.icon-sedan{background: url("../images/icon-sedans.svg")  no-repeat;}
+.icon-suv{background: url("../images/icon-suvs.svg") no-repeat;}
+.icon-luxury{background: url("../images/icon-luxury.svg")  no-repeat;}
+
+
+
+div h1{
+    padding-left: 40px;
+    margin: 20px 0;
+    font-family: var(--BoldFont);
+    text-transform: uppercase;
+}
+
+.inner-text{
+ padding: 20px 40px;   
+ font-size: 1rem;
+ font-family: "Lexend Deca";
+ font-family: sans-serif;
+ line-height: 1.8;
+}
+
+.btn-select{
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 40%;
+    height: 40px;
+    background-color: white;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    font-family: inherit;
+}
+
+.btn-select:hover{
+    color: white;
+    border: 1px solid white;
+}
+
+.color1{color: var(--BrightOrange);}
+.color1:hover{background-color: var(--BrightOrange);}
+
+.color2{color: var(--DarkCyan);}
+.color2:hover{background-color: var(--DarkCyan);}
+
+
+.color3{color: var(--VeryDarkCyan);}
+.color3:hover{background-color: var(--VeryDarkCyan);}
+
+
+
+@media screen and (max-width: 1125px) {
+    .container{
+        grid-template-columns: 300px;
+        grid-template-rows: 0px 400px 400px 400px 0px 50px;
+        height: auto;
+        width: 375px;
+        justify-content: center;
+        
+    }
+    
+    footer{
+        grid-column: 1 / -1;
+        font-size: 0.8rem;
+    }
+
+    .first{
+        border-radius: 5px 5px 0px 0px;
+    }
+    
+    .third{
+        border-radius: 0px 0px 5px 5px;
+    }
+    
+    body{
+        margin-top: 20px;
+        
+    }
+
+    .inner-text{
+        padding: 0 40px;   
+        font-size: 1rem;
+        font-family: sans-serif;
+        line-height: 1.4;
+    }
+
+    .btn-select{
+        margin-top: 20px;
+    }
+    
+       
+
+}
